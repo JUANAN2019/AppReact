@@ -14,8 +14,8 @@ function NavCompletoS() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">prueba</Nav.Link>
-            <Nav.Link href="#pricing">Precios</Nav.Link>
+            <Nav.Link href="#features">Nosotros</Nav.Link>
+            <Nav.Link href="#pricing">Contacto</Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">

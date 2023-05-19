@@ -4,6 +4,7 @@ import './App.css';
 import NavInferior from './Componentes/NavInferior';
 import Carrusel  from './Componentes/Carrusel';
 import NavCompleto from './Componentes/NavCompletoS';
+import Formulario from './Componentes/Formulario';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         </div>
         <div id="carrusel"><Carrusel/></div>
         <div id="navInf"><NavInferior/></div>
+        <div id='formulario'><Formulario/></div>
 
         
         
