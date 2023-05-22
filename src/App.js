@@ -1,22 +1,25 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
+import NavInferior from './Componentes/NavInferior';
+import Carrusel  from './Componentes/Carrusel';
+import NavCompleto from './Componentes/NavCompletoS';
+import Formulario from './Componentes/Formulario';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App-header ">
+        <div className="elNav ">
+          <div className="navCom "><NavCompleto/></div>
+           
+        </div>
+        <div id="carrusel"><Carrusel/></div>
+        <div id="navInf"><NavInferior/></div>
+        <div id='formulario'><Formulario/></div>
+
+        
+        
       </header>
     </div>
   );
