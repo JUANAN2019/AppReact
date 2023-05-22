@@ -2,26 +2,30 @@ import React, { useEffect, useState } from 'react'
 import { allCharacters } from './functions/Functions'
 import './Main.css'
 
-const Main = () => {
-    const[characters, setCharacters] = useState(null)
+const Mainpage = () => {
+    const [characters, setCharacters] = useState(null)
 
-    useEffect(()=>{
+    useEffect(() => {
         allCharacters(setCharacters)
-    },[])
+    }, [])
 
-return (
-<>
-    {characters != null ? (
-        characters.map(characters => (
-        <div key={characters.id}>
-            <a href={`/characters/${characters.id}`}>{characters.name}</a>
-            <img src={characters.image} alt="" />
+    return (
+        <div className="contenedor">
+            {characters != null ? (
+                characters.map(characters => (
+                    <div key={characters.id}>
+                        <div class="cardapp">
+                            <img src={characters.image} alt="" />
+                            <div class="cardapp-body">
+                                <a href={`/characters/${characters.id}`}>➡️ {characters.name}</a>
+                            </div>
+                        </div>
+                    </div>
+                ))
+            ) : ('there is no characters')}
+
         </div>
-        ))
-    ) : ('there is no characters')}
-
-</>
     )
 }
 
-export default Main
+export default Mainpage

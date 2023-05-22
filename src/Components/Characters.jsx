@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react'
 import './characters.css'
 import { useParams } from 'react-router-dom'
 import { uniqueCharacter } from './functions/Functions'
-import '../Components/Main'
 
 const CharacterList = () => {
   const [characters, setCharacters] = useState(null)
@@ -13,18 +12,22 @@ const CharacterList = () => {
   },[])
   
   return (
-    <>
+    <div className="contenedorCharacter">
     {characters != null ? (
         <div className='Character'>
-            <h2>Character Id: {params.id}</h2>
-            <p>Character Name: {characters.name}</p>
-            <p>Specie: {characters.specie}</p>
-            <p>Gender: {characters.gender}</p>
-            <p>Status: {characters.status}</p>
+            <div class="card-body">
+            <h2><strong>Character Id: </strong>{params.id}</h2>
+            <p><strong>Character Name: </strong> {characters.name}</p>
+            <p><strong>Species: </strong> {characters.species}</p>
+            <p> <strong>Gender: </strong>  {characters.gender}</p>
+            <p><strong>Status: </strong>{characters.status}</p>
+            <div class="card">
             <img src={characters.image} alt="" />
+            </div>
+            </div>
         </div>
   ) : ('there is no characters')} 
-    </>
+    </div>
   )
 }
 
