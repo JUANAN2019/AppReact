@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  justify-content: center;
+  font-family: "Righteous", monospace;
+}
+
+.Navbar-logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}/*# sourceMappingURL=navbar.css.map */
