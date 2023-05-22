@@ -19,15 +19,16 @@ function App() {
         <div className="contenedor-general">
           <div className="contenedor">
                 <BrowserRouter >
+                <div className="cardapp">
                   <Routes >
                     <Route  path='/' element={<Main />}></Route>
                     <Route path='/characters/:id' element={<Characters />}></Route> 
                   </Routes>
+                </div>
                 </BrowserRouter>
           </div>
         </div>
       </div>
-
     </div>
   );
 }
