@@ -14,7 +14,7 @@ const CharacterList = () => {
   return (
     <div className="contenedorCharacter">
       {characters != null ? (
-        <div id='Character'>
+        <div className='Character'>
           <div class="card-body">
             <h2><strong>Character Id: </strong>{params.id}</h2>
             <p><strong>Character Name: </strong> {characters.name}</p>
