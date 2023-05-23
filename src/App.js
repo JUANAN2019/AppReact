@@ -1,46 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import Footer from './Components/Footer';
-import './App.css';
+import AnimePage from './Components/AnimePage';
+import UserPage from './Components/UserPage';
 
 const App = () => {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://randomuser.me/api/?results=12');
-        const data = await response.json();
-        setUsers(data.results);
-      } catch (error) {
-        console.log('Error al obtener los datos:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  const handleRefresh = () => {
-    window.location.reload();
-  };
-
   return (
-    <div className="container">
-      <h1>Random Users</h1>
-      <div className="button-container">
-        <button className="refresh-button" onClick={handleRefresh}>
-          Actualizar
-        </button>
-      </div>
-      <div className="grid-container">
-        {users.map(user => (
-          <div className="grid-item" key={user.login.uuid}>
-            <img src={user.picture.thumbnail} alt={user.name.first} />
-            <span>{user.name.first} {user.name.last}</span>
-          </div>
-        ))}
-      </div>
+    <BrowserRouter>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Inicio</Link>
+          </li>
+          <li>
+            <Link to="/animes">Animes</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<UserPage />} />
+        <Route path="/animes" element={<AnimePage />} />
+      </Routes>
+
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 };
 
