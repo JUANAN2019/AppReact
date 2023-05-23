@@ -12,17 +12,26 @@
   border-radius: 50%;
   margin-left: 10px;
   margin-right: 10px;
- }
-
-@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
-  to {-webkit-transform: rotate(360deg);}}
-.logo{
-    -webkit-animation: 3s rotate linear infinite;
-    animation: 3s rotate linear infinite;
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
 }
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 .logo {
-     -webkit-animation-direction: reverse;
-     animation-direction: reverse;
+  -webkit-animation: 3s rotate linear infinite;
+  animation: 3s rotate linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+.logo {
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
 }
